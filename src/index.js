@@ -2,12 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import {app} from './firebase-config';
+import axios from "axios";
 import reportWebVitals from './reportWebVitals';
+import setupAxios from "./axiosInterceptor";
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
+
+
+// This command will setup interceptor
+setupAxios(axios);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </React.StrictMode>
 );
 
