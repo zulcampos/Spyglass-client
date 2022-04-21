@@ -13,7 +13,7 @@ function Home(){
         axios.get("http://localhost:8080/me")
     },[])
     return(<>
-        <h1>Home</h1>
+        <h1></h1>
         <button onClick={logMeOut}>Log Out</button>
     </>);
 }
