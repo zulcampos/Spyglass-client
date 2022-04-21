@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  background-image: url("https://wallpaperaccess.com/full/4194257.jpg");
+  position: fixed;
+  min-width: 50%;
+  min-height: 70%;
+  background-size: cover;
+  background-position: center;
+
 }
 
 .App-logo {
@@ -14,7 +21,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #040b19;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +42,5 @@
   to {
     transform: rotate(360deg);
   }
+  
 }

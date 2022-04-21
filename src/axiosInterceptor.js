@@ -1,5 +1,6 @@
 import {getAuth} from 'firebase/auth';
 
+
 const auth = getAuth();
 
 auth.onAuthStateChanged((user)=> {
@@ -11,7 +12,7 @@ export default function setupAxios(axios) {
     axios.interceptors.request.use(async config => {
         const authToken = sessionStorage.getItem("accessToken");
         if(authToken){
-            config.headers.Authorization = `Bearer ${authToken}`;
+          config.headers.Authorization = `Bearer ${authToken}`;
         }
         return config;
     },
