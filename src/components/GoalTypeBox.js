@@ -18,7 +18,7 @@ export default function BasicSelect() {
     <Grid container = "column" alignItems="center"justify="center" >
          
     
-      <FormControl fullWidth >
+         <FormControl sx={{ml: 68, minWidth: 352 }} size="md">
         <InputLabel id="demo-simple-select-label">Goal Type</InputLabel>
         <Select
           style={{background: "rgb(232, 241, 250)"}}
@@ -29,7 +29,7 @@ export default function BasicSelect() {
           onChange={handleChange}
         >
           <MenuItem value={10}>Travel</MenuItem>
-          <MenuItem value={20}>Marrige</MenuItem>
+          <MenuItem value={20}>Marriage</MenuItem>
           <MenuItem value={30}>Baby</MenuItem>
           <MenuItem value={40}>Retirement</MenuItem>
           <MenuItem value={50}>Home</MenuItem>

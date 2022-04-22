@@ -6,9 +6,11 @@ import GoalTypeBox from '../components/GoalTypeBox';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import SearchBar from '../components/SearchBar';
+import { FormControl } from '@mui/material';
+
 
 export default function MultilineTextFields() {
-  const [value, setValue] = React.useState('Text');
+  const [value, setValue] = React.useState('');
 
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -23,29 +25,32 @@ export default function MultilineTextFields() {
       noValidate
       autoComplete="off"
     >
+      <SearchBar></SearchBar>
       <div>
         <TextField
           style={{background: "rgb(232, 241, 250)"}}
           id="outlined-textarea"
           label="Goal Start Date"
+          placeholder="MM/DD/YYYY"
           multiline
           maxRows={2}
-          value={value}
           onChange={handleChange}
         />
         </div>
         <div className="col-8">
         
-        <GoalTypeBox alignItems="center"justify="center">
-            
-        </GoalTypeBox>
+      
         </div>
         <div>
+            
+        <GoalTypeBox container direction="column" alignItems="center"justify="center">
+            
+            </GoalTypeBox>
         <TextField
           style={{background: "rgb(232, 241, 250)"}}
           id="outlined-textarea"
           label="Goal Due Date"
-          placeholder="Placeholder"
+          placeholder="MM/YYYY"
           multiline
         />
       </div>
@@ -53,9 +58,10 @@ export default function MultilineTextFields() {
           style={{background: "rgb(232, 241, 250)"}}
           id="filled-multiline-static"
           label="Goal Description"
+          placeholder="Enter description here!"
           multiline
           rows={4}
-          defaultValue="Enter"
+          defaultValue=""
           variant="filled"
         />
       <div>
@@ -64,9 +70,9 @@ export default function MultilineTextFields() {
           style={{background: "rgb(232, 241, 250)"}}
           id="filled-multiline-flexible"
           label="Saved So Far"
+          placeholder="$"
           multiline
           maxRows={4}
-          value={value}
           onChange={handleChange}
           variant="filled"
         />
@@ -76,25 +82,24 @@ export default function MultilineTextFields() {
           style={{background: "rgb(232, 241, 250)"}}
           id="standard-multiline-flexible"
           label="Goal Amount"
+          placeholder="$"
           multiline
           maxRows={4}
-          value={value}
           onChange={handleChange}
-          variant="standard"
+          variant="filled"
         />
         
       </div>
       <ProgressBar></ProgressBar>
-
+      <FormControl sx={{ ml: 5, minWidth: 120 }} size="small">
     <Stack spacing={2} direction="row">
-      <Button 
-          style={{background: "rgb(232, 241, 250)"}}variant="start">Start</Button>
+      
+      <Button
+      
+          style={{background: "rgb(232, 241, 250)"}}variant="save" >Save</Button>
     </Stack>
 
-
-<SearchBar></SearchBar>
-
-
+      </FormControl>
     </Box>
 
   );
