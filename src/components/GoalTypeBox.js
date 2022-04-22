@@ -18,7 +18,7 @@ export default function BasicSelect() {
     <Grid container = "column" alignItems="center"justify="center" >
          
     
-         <FormControl sx={{ml: 68, minWidth: 352 }} size="md">
+         <FormControl sx={{ml: 72, minWidth: 289 }} size="md">
         <InputLabel id="demo-simple-select-label">Goal Type</InputLabel>
         <Select
           style={{background: "rgb(232, 241, 250)"}}
