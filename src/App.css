@@ -1,9 +1,13 @@
+
+
+
+
 .App {
   text-align: center;
   background-image: url("https://wallpaperaccess.com/full/4194257.jpg");
   position: fixed;
-  min-width: 50%;
-  min-height: 70%;
+  min-width: 100%;
+  min-height: 100%;
   background-size: cover;
   background-position: center;
 
