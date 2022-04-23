@@ -15,6 +15,7 @@ import Register from '../pages/Register';
 import HowToUse from '../pages/HowToUse';
 import Welcome from '../pages/Welcome';
 import GoalForm from '../pages/GoalForm';
+import Profile from '../pages/Profile';
 
 
 export function AppRoutes(){
@@ -25,12 +26,14 @@ export function AppRoutes(){
                 <Route path="/about" element={<About />} />
                 <Route path="/welcome" element={<Welcome />} />
                 <Route path="/goalform" element={<GoalForm />} />
+                <Route path="/profile" element={<Profile />} />
 
             </Route>
             <Route path="/" element={<PublicRoutes />}>
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/howtouse" element={<HowToUse />} />
+                
             
             </Route>
         </Routes>
