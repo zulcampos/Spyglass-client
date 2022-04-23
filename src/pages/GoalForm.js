@@ -56,7 +56,7 @@ export default function MultilineTextFields() {
       </div>
       <TextField
           style={{background: "rgb(232, 241, 250)"}}
-          id="filled-multiline-static"
+          id="outlined-textarea"
           label="Goal Description"
           placeholder="Enter description here!"
           multiline
@@ -65,6 +65,7 @@ export default function MultilineTextFields() {
           variant="filled"
         />
       <div>
+      
       
         <TextField
           style={{background: "rgb(232, 241, 250)"}}
